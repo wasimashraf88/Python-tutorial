@@ -9,6 +9,7 @@ print(too_low)
 print("Heart rate high:")
 print(too_heigh)
 
+print(True)
 
 
 
