@@ -1,15 +1,23 @@
-heart_rate = 700
+class ExampleClass:
+    def __init__(self, val = 1):
+        self.first = val
 
-too_low = heart_rate < 80
-too_heigh =heart_rate > 100
+    def setSecond(self, val):
+        self.second = val
 
-print("Heart rate low:")
-print(too_low)
 
-print("Heart rate high:")
-print(too_heigh)
+exampleObject1 = ExampleClass(2)
+exampleObject2 = ExampleClass(2)
 
-print(True)
+exampleObject2.setSecond(3)
+
+exampleObject3 = ExampleClass(4)
+exampleObject3.third = 5
+
+
+print(exampleObject1,exampleObject2)
+print(exampleObject2.__dict__)
+print(exampleObject3.__dict__)
 
 
 
