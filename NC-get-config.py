@@ -1,11 +1,12 @@
-
+import argparse
 import sys
-from argparse import ArgumentParser
-from ncclient import manager
+import ncclient
+#from argparse import ArgumentParser
+#from ncclient import manager
 import xml.dom.minidom
 
 if __name__ == '__main__':
-    parser = ArgumentParser(description='Select options.')
+    parser =argparse.ArgumentParser(description='Select options.')
     # Input parameters
     parser.add_argument('--host', type=str, required=True,
                         help="The device IP or DN")
@@ -17,7 +18,7 @@ if __name__ == '__main__':
                         help="Specify this if you want a non-default port")
     args = parser.parse_args()
 
-    m =  manager.connect(host=args.host,
+    m = manager.connect(host=args.host,
                          port=args.port,
                          username=args.username,
                          password=args.password,

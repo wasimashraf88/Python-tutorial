@@ -9,5 +9,12 @@
 #For sum int and string we can use typecasting
 # x = 5
 # y = "6"
+#x = 100
+def myfunc():
+    global x
+    x = 101
+    print(x)
+myfunc()
+print(x)
 
 
